@@ -1,14 +1,10 @@
 {
   "name": "lagou",
   "version": "1.0.0",
-  "description": "---",
-  "main": "index.js",
+  "description": "拉勾大前端训练营课程资源学习",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "lodash": "^4.17.21"
-  }
+  "author": "lihaoyu",
+  "license": "ISC"
 }
