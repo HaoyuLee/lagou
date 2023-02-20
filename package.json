@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "description": "拉勾大前端训练营课程资源学习",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "open": "webpack-dev-server --open"
   },
   "author": "lihaoyu",
   "license": "ISC",
   "dependencies": {
     "folktale": "^2.3.2",
-    "lodash": "^4.17.21"
+    "html-webpack-plugin": "^5.5.0",
+    "lodash": "^4.17.21",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "devDependencies": {
+    "@webpack-cli/serve": "^2.0.1",
+    "parcel": "^2.8.3",
+    "webpack": "^5.75.0"
   }
 }
