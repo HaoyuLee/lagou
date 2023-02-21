@@ -1,36 +1,23 @@
-class DiyPromise {
-  constructor(fn) {
-    this.status = 'pending'
-    this._resolve = function (value) {
-      this.status = 'fulfilled'
-      this.value = value
-    }
-    this._reject = function (error) {
-      this.status = 'rejected'
-      this.error = error
-    }
-    fn(this._resolve, this._reject)
-  }
-  static resolve (value) {
-    return new DiyPromise((resolve, reject) => resolve(value))
-  }
-  static reject(error) {
-    return new DiyPromise((resolve, reject) => reject(error))
-  }
-  static all (instances) {
+const MyPromise = require('./myPromise')
+const p = new MyPromise((resolve, reject) => {
+  // setTimeout(() => {
+    resolve(123)
+  // }, 2000)
+}).then(value => {
+  console.log(123)
+  return p
+})
+// p.then((res) => {
+//   console.log(res)
+//   return 456
+// }).then(value => {
+//   console.log(value, 'p2')
+//   return new MyPromise((resolve) => {resolve('promise成功后的结果')})
+// }).then(value => {
+//   console.log(value)
+// })
 
-  }
-  static race (instances) {
-
-  }
-  then(fn) {
-    if(this.status === 'fulfilled') {
-      fn(this.value)
-    }
-  }
-  catch (errorFn) {
-    if(this.status === 'rejected') {
-      errorFn(this.error)
-    }
-  }
-}
+// const p1 = p.then(value => {
+//   console.log(123)
+//   return p1
+// })
