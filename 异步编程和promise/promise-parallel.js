@@ -1,4 +1,3 @@
-const { reject } = require("lodash")
 
 function ajax (url) {
   return new Promise(function(resolve, reject) {
